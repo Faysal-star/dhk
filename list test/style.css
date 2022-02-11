@@ -1,0 +1,21 @@
+ul{
+    list-style: none;
+
+}
+li{
+    /* border-bottom: 1px solid gray;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; */
+}
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+.chk:checked~a{
+    display: none;
+}
+.chk:checked{
+    display: none;
+}

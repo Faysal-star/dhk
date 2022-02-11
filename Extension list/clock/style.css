@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));
+    font-family: 'Pacifico', cursive;
+    max-width: 300px;
+}
+
+.container{
+
+    height: 400px;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.clock{
+    background-color: rgba(255, 255, 255, .8);
+    border: 2px solid black;
+    color: black;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.number{
+    position: absolute;
+    line-height: .8;
+    font-size: 35px;
+    width :100%;
+    height: 100%;
+    /* background-color: red; */
+    text-align: center;
+    transform: rotate(calc(30deg*var(--i)));
+    font-weight: bolder;
+}
+.hand{
+    --rotation : 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%) translateY(-100%) rotate(calc(var(--rotation)*1deg));
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    z-index: 10;
+}
+.center{
+    background-color: black;
+    height: 25px;
+    width: 25px;
+    z-index: 14;
+    border-radius: 50% ;
+}
+.text{
+    position: absolute;
+    bottom: 20%;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.second {
+    width: 2px;
+    height: 40%;
+    background-color: red;
+    z-index: 13;
+}
+.minute {
+    width: 6px;
+    height: 33%;
+    background-color: rgb(44, 44, 44);
+    z-index: 12;
+}
+.hour {
+    width: 8px;
+    height: 25%;
+    background-color: black;
+}
+
+.txt{
+    margin-top : 20px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #242B2E;
+}
+
+.link{
+    
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    z-index: 20;
+}
+.svg-icon {
+    width: 30px;
+    height: 30px;
+    
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: black;
+  }
+  
+  .svg-icon circle {
+    stroke: black;
+    stroke-width: 1;
+  }

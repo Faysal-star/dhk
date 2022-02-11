@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
+.light{
+    --bg : rgb(236, 236, 236);
+    --txt : black;
+    --bg2 : rgb(200,200,200);
+    --bg3 : rgb(50, 50, 50);
+    
+}
+.dark{
+    --bg : rgb(20, 20, 20);
+    --txt : white;
+    --bg2 : rgb(50,50,50);
+    --bg3 : rgb(200,200,200);
+    
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg);
+    color: var(--txt);
+    font-family: 'Supermercado One', cursive;
+    
+}
+a{
+    text-decoration: none;
+    color : var(--txt);
+    font-size: 25px;
+    padding: 70px;
+    
+}
+div{
+    text-align: center;
+}
+#h{
+    font-size: 35px;
+}
+nav{
+    width: 100%;
+    padding-right: 100px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+button{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 15px;
+    background-color: var(--bg2);
+    color: var(--txt);
+    border : none;
+    display: block;
+    margin-left: auto;
+    
+    
+}
+#icon{
+    transform: rotate(0deg);
+    
+}
+button:active{
+    animation-name: rotat;
+    animation-duration: .3s;
+}
+@keyframes rotat {
+    0%{
+    transform: rotate(0deg);
+    }
+    100%{
+        transform : rotate(360deg)
+    }
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+   margin-top: 50px;
+}
+@media (max-width : 500px){
+    .parent{
+        grid-template-columns: 1fr;
+    }
+    nav{
+        padding-right: 10px;
+    }
+}
+
+.parent div{
+    height: 200px;
+    width: 200px;
+    background-color: var(--bg2);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   transition: .1s;
+   
+}
+
+.parent div:hover{
+    
+    transform: translateX(-10px) translateY(-15px);
+    box-shadow: 10px 10px 20px var(--bg3);
+}
